@@ -1,1 +1,21 @@
-<h1>Index </h1>
+<br>
+<br>
+<br>
+<h1>Blog Post</h1>
+<% @posts.each do |post| %>
+
+<div class="well well-lg">
+
+<h3>
+  <%= post.title %>
+
+</h3>
+<p>
+  <%= post.body %>
+
+</p>
+<%= link_to 'Read More', post_path(post), :class => 'btn btn-default' %>
+<br><hr>
+</div>
+
+<% end %>
